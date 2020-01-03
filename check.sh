@@ -35,14 +35,14 @@ sleep .5
 
 if [ ! -f $SRC_FILE ]
   then
-    echo -e "Source file exists [\e[31mFailed\e[0m]\nTerminating...\n\n"
+    echo -e "Source file not found [\e[31mFailed\e[0m]\nTerminating...\n\n"
     exit
   else
     echo -e "Source file exists [\e[32mOk\e[0m]\n\n"
     sleep .5
     if [ ! -s $SRC_FILE ]
     then
-      echo -e "Source file isn't empty [\e[31mFailed\e[0m]\nTerminating...\n\n"
+      echo -e "Source file is empty [\e[31mFailed\e[0m]\nTerminating...\n\n"
       exit
     else
       echo -e "Source file isn't empty [\e[32mOk\e[0m]\n\n"
